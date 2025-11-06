@@ -12,7 +12,7 @@ This repository contains the code for a Java application that performs a linear 
 
 ### Sección 2.1
 
-- **Según la notación O, ¿cuál es orden de complejidad del algoritmo de búsqueda que ha implementado?:** O(n\*m), siendo `n` el tamaño del genoma (`content`) y `m` el tamaño del patrón (`pattern`).
+- **Según la notación O, ¿cuál es orden de complejidad del algoritmo de búsqueda que ha implementado?:** $O(n \cdot m)$, siendo `n` el tamaño del genoma (`content`) y `m` el tamaño del patrón (`pattern`).
 - **Compare los tiempos obtenidos al buscar en un archivo de 600 KB con los obtenidos al buscar en un archivo de 60 MB. ¿Son consistentes con el orden del algoritmo?:** Sí, el tiempo crece conforme crece `n` (dos órdenes de magnitud, unas 100-300 veces, teniendo en cuenta ineficiencias), ya que en este caso `m` (el tamaño del patrón a buscar) no varía entre ambos archivos.
 
 ### Sección 2.2
@@ -27,10 +27,10 @@ This repository contains the code for a Java application that performs a linear 
 
 ### Sección 4.1
 
-- **Según la notación O, ¿cuél es el orden de complejidad de la búsqueda ahora?:** O(m\*log(n)), siendo `n` el tamaño del genoma (`content`) y `m` el tamaño del patrón (`pattern`).
-- **¿Ha cambiado apreciablemente el tiempo de ejecución de la búsqueda? ¿A partir de cuántas búsquedas empieza a compensar ordenar?:** Sí, considerablemente. La búsqueda es muchísimo más rápida. Como el proceso de ordenación tiene una complejidad de O(n\*log(n)) y la búsqueda lineal (sin ordenar) una complejidad de O(n), eso quiere decir que compensará ordenar a partir de log(n) búsquedas. Esto puede determinarse matemáticamente o calcularse experimentalmente, que es lo que probablemente haya hecho usted durante la práctica.
+- **Según la notación O, ¿cuél es el orden de complejidad de la búsqueda ahora?:** $O(m \cdot \log{n})$, siendo `n` el tamaño del genoma (`content`) y `m` el tamaño del patrón (`pattern`).
+- **¿Ha cambiado apreciablemente el tiempo de ejecución de la búsqueda? ¿A partir de cuántas búsquedas empieza a compensar ordenar?:** (Para este apartado ignoraremos `n`, que es mucho menor que `m`) Sí, considerablemente. La búsqueda es muchísimo más rápida. Como el proceso de ordenación tiene una complejidad de $O(n \cdot \log{n})$ y la búsqueda lineal (sin ordenar) una complejidad de $O(n)$, eso quiere decir que compensará ordenar a partir de $log{n}$ búsquedas. Esto puede determinarse matemáticamente o calcularse experimentalmente, que es lo que probablemente haya hecho usted durante la práctica.
 
 ### Sección 4.2
 
-- **Según la notación O, ¿ha cambiado el orden de complejidad de la búsqueda al añadir este código nuevo?:** Técnicamente, sí, la complejidad ahora es O(m\*log(n) + k\*n), siendo `n` el tamaño del genoma (`content`), `m` el tamaño del patrón (`pattern`), y `k` el número de veces que aparece el patrón. No obstante, como `k` es un número mucho más pequeño que los otros dos, podría considerarse que la complejidad es O(m\*log(n)). Es decir, la misma que antes.
+- **Según la notación O, ¿ha cambiado el orden de complejidad de la búsqueda al añadir este código nuevo?:** Técnicamente, sí, la complejidad ahora es $O(m \cdot \log{n} + k \cdot n )$, siendo `n` el tamaño del genoma (`content`), `m` el tamaño del patrón (`pattern`), y `k` el número de veces que aparece el patrón. No obstante, como `k` es un número mucho más pequeño que los otros dos, podría considerarse que la complejidad es $O(m \cdot \log{n})$. Es decir, la misma que antes.
 - **¿Ha cambiado apreciablemente el tiempo de ejecución de la búsqueda?:** No, es prácticamente el mismo.
